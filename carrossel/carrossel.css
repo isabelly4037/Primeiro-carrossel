@@ -1,0 +1,311 @@
+#bloco {
+    width: 80vw;
+    margin: 5vh auto;
+}
+
+input {
+    display: none;
+}
+
+.conteudo {
+    width: 40vw;
+    height: 50vh;
+    border: 1px #000000 solid;
+    margin: 5vh 0;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    border-radius: 25px;
+}
+
+.conteudo div {
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    font-size: 4em;
+    text-align: center;
+    font-weight: bold;
+    color: #FFFFFF;
+    line-height: 50vh;
+    border-radius: 25px;
+}
+
+.conteudo div.i01 {
+    background-color: #336699;
+}
+
+.conteudo div.i02 {
+    background-color: #996633;
+}
+
+.conteudo div.i03 {
+    background-color: #669933;
+}
+
+.setasE,
+.setasD {
+    width: 10vw;
+    height: 50vh;
+    float: left;
+    background-color: #ccc;
+    margin: 5vh 2.5vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.setasE label,
+.setasD label {
+    width: 50%;
+    height: 50vh;
+    font-size: 4em;
+    text-align: center;
+    line-height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: hand;
+    cursor: pointer;
+    display: none;
+}
+
+.bolinhas {
+    width: 8.5vw;
+    margin: 5vh auto;
+    clear: both;
+    position: relative;
+}
+
+.bolinhas label {
+    background: #f017e5;
+    width: 2vw;
+    height: 2vw;
+    border-radius: 51%;
+    position: absolute;
+    z-index: 555;
+    top: .3vw;
+    cursor: hand;
+    cursor: pointer;
+    display: none;
+}
+
+.bolinhas div {
+    background: #0fc218;
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 51%;
+    position: absolute;
+    z-index: 444;
+    display: none;
+}
+
+.bolinhas label.bl01E,
+.bolinhas label.bl01D {
+    left: .2vw;
+}
+
+.bolinhas label.bl02E,
+.bolinhas label.bl02D {
+    left: 3.2vw;
+}
+
+.bolinhas label.bl03E,
+.bolinhas label.bl03D {
+    left: 6.2vw
+}
+
+.bolinhas div.bl01 {
+    left: 0;
+}
+
+.bolinhas div.bl02 {
+    left: 3vw;
+}
+
+.bolinhas div.bl03 {
+    left: 6vw
+}
+
+@keyframes entraE {
+    from {
+        left: -30vw;
+    }
+
+    to {
+        left: 0vw;
+    }
+}
+
+@keyframes saiD {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 30vw;
+    }
+}
+
+@keyframes entraD {
+    from {
+        left: 30vw;
+    }
+
+    to {
+        left: 0vw;
+    }
+}
+
+@keyframes saiE {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -30vw;
+    }
+}
+
+#i01E:checked~.conteudo .i01 {
+    animation-name: entraE;
+    animation-duration: 1s;
+    z-index: 999;
+    display: block;
+}
+
+#i01E:checked~.conteudo .i02 {
+    animation-name: saiD;
+    animation-duration: 1s;
+    z-index: 555;
+    display: block;
+}
+
+#i01D:checked~.conteudo .i01 {
+    animation-name: entraD;
+    animation-duration: 1s;
+    z-index: 999;
+    display: block;
+}
+
+#i01D:checked~.conteudo .i03 {
+    animation-name: saiE;
+    animation-duration: 1s;
+    z-index: 555;
+    display: block;
+}
+
+#i01D:checked~.setasE .lb03,
+#i01E:checked~.setasE .lb03 {
+    display: block;
+}
+
+#i01D:checked~.setasD .lb02,
+#i01E:checked~.setasD .lb02 {
+    display: block;
+}
+
+#i01D:checked~.bolinhas .bl01,
+#i01E:checked~.bolinhas .bl01,
+#i01D:checked~.bolinhas .bl02D,
+#i01E:checked~.bolinhas .bl02D,
+#i01D:checked~.bolinhas .bl03E,
+#i01E:checked~.bolinhas .bl03E {
+    display: block;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+#i02E:checked~.conteudo .i02 {
+    animation-name: entraE;
+    animation-duration: 1s;
+    z-index: 999;
+    display: block;
+}
+
+#i02E:checked~.conteudo .i03 {
+    animation-name: saiD;
+    animation-duration: 1s;
+    z-index: 555;
+    display: block;
+}
+
+#i02D:checked~.conteudo .i02 {
+    animation-name: entraD;
+    animation-duration: 1s;
+    z-index: 999;
+    display: block;
+}
+
+#i02D:checked~.conteudo .i01 {
+    animation-name: saiE;
+    animation-duration: 1s;
+    z-index: 555;
+    display: block;
+}
+
+#i02D:checked~.setasE .lb01,
+#i02E:checked~.setasE .lb01 {
+    display: block;
+}
+
+#i02D:checked~.setasD .lb03,
+#i02E:checked~.setasD .lb03 {
+    display: block;
+}
+
+
+#i02D:checked~.bolinhas .bl02,
+#i02E:checked~.bolinhas .bl02,
+#i02D:checked~.bolinhas .bl03D,
+#i02E:checked~.bolinhas .bl03D,
+#i02D:checked~.bolinhas .bl01E,
+#i02E:checked~.bolinhas .bl01E {
+    display: block;
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+#i03E:checked~.conteudo .i03 {
+    animation-name: entraE;
+    animation-duration: 1s;
+    z-index: 999;
+    display: block;
+}
+
+#i03E:checked~.conteudo .i01 {
+    animation-name: saiD;
+    animation-duration: 1s;
+    z-index: 555;
+    display: block;
+}
+
+#i03D:checked~.conteudo .i03 {
+    animation-name: entraD;
+    animation-duration: 1s;
+    z-index: 999;
+    display: block;
+}
+
+#i03D:checked~.conteudo .i02 {
+    animation-name: saiE;
+    animation-duration: 1s;
+    z-index: 555;
+    display: block;
+}
+
+#i03D:checked~.setasE .lb02,
+#i03E:checked~.setasE .lb02 {
+    display: block;
+}
+
+#i03D:checked~.setasD .lb01,
+#i03E:checked~.setasD .lb01 {
+    display: block;
+}
+
+#i03D:checked~.bolinhas .bl03,
+#i03E:checked~.bolinhas .bl03,
+#i03D:checked~.bolinhas .bl01D,
+#i03E:checked~.bolinhas .bl01D,
+#i03D:checked~.bolinhas .bl02E,
+#i03E:checked~.bolinhas .bl02E {
+    display: block;
+}
